@@ -1,10 +1,9 @@
----
 language: node_js
 node_js:
-  - 12
+  - 8
 install:
-  - npm install -g coveralls
+  # - npm install -g coveralls
   - npm install
-
 script:
-  - npm run test-coverage # && cat coverage/lcov.info | coveralls
+  - npm test # for normal testing
+  # - npm run test-coverage && cat coverage/lcov.info | coveralls  # for coverage enabled testing
