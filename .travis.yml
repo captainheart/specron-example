@@ -10,10 +10,10 @@ install:
   - cd ~/specron-framework
   - rush update # or `rush install`
   - rush build
-  - export PATH="~/specron-framework/packages/specron-example/node_modules/@specron/cli/bin:$PATH"
   - cd ./packages/specron-example
-script:
+  # - export PATH=~/specron-framework/packages/specron-example/node_modules/@specron/cli/bin:$PATH
   - export PATH=~/specron-framework/packages/specron-cli/bin:$PATH
+script:
   - npm test # for normal testing
   # - npm run test-coverage
 
