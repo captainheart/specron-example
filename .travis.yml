@@ -1,9 +1,16 @@
 language: node_js
 node_js:
-  - 8
+  - 12
 install:
-  # - npm install -g coveralls
-  - npm install
+  - npm install -g coveralls
+  - npm install -g @microsoft/rush
+  - git clone https://github.com/captainheart/specron-framework.git ~/specron-framework
+  - mv . ~/specron-framework/packages/
+  - cd ~/specron-framework
+  - rush install
+  - rush build
+  - export PATH="~/specron-framework/packages/specron-example/node_modules/@specron/cli/bin:$PATH"
+  - cd ./packages/specron-example
 script:
-  - npm test # for normal testing
-  # - npm run test-coverage && cat coverage/lcov.info | coveralls  # for coverage enabled testing
+  # - npm test # for normal testing
+  - npm run test-coverage && cat coverage/lcov.info | coveralls  # for coverage enabled testing

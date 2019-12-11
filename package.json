@@ -1,8 +1,9 @@
 {
-  "name": "myproject",
+  "name": "specron-example",
   "description": ".",
   "version": "0.0.0",
   "scripts": {
+    "build": "echo 'nothing'",
     "compile": "specron compile",
     "sandbox": "specron sandbox",
     "prepare": "specron compile",
@@ -34,8 +35,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@specron/cli": "latest",
-    "@specron/spec": "latest",
+    "@specron/cli": "*",
+    "@specron/spec": "*",
     "solc": "^0.4.25",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.1",
