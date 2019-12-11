@@ -22,7 +22,6 @@
     },
     "test": {
       "server": false,
-      "coverage": true,
       "port": 8545,
       "host": "localhost",
       "match": [
