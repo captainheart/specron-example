@@ -4,7 +4,7 @@ node_js:
 install:
   - npm install -g coveralls
   - npm install -g @microsoft/rush
-  - git clone https://github.com/captainheart/specron-framework.git ~/specron-framework
+  - git clone --branch=backup https://github.com/captainheart/specron-framework.git ~/specron-framework
   - cd ..
   - mv ./specron-example ~/specron-framework/packages/
   - cd ~/specron-framework
