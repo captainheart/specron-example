@@ -13,5 +13,9 @@ install:
   - export PATH="~/specron-framework/packages/specron-example/node_modules/@specron/cli/bin:$PATH"
   - cd ./packages/specron-example
 script:
-  # - npm test # for normal testing
-  - npm run test-coverage && cat coverage/lcov.info | coveralls  # for coverage enabled testing
+  - export PATH=~/specron-framework/packages/specron-cli/bin:$PATH
+  - npm test # for normal testing
+  # - npm run test-coverage
+
+after_success:
+  - cat coverage/lcov.info | coveralls  # for coverage enabled testing
