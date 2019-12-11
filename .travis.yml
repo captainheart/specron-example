@@ -5,9 +5,10 @@ install:
   - npm install -g coveralls
   - npm install -g @microsoft/rush
   - git clone https://github.com/captainheart/specron-framework.git ~/specron-framework
-  - mv . ~/specron-framework/packages/
+  - cd ..
+  - mv ./specron-example ~/specron-framework/packages/
   - cd ~/specron-framework
-  - rush install
+  - rush update # or `rush install`
   - rush build
   - export PATH="~/specron-framework/packages/specron-example/node_modules/@specron/cli/bin:$PATH"
   - cd ./packages/specron-example
